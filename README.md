@@ -2,6 +2,8 @@ MintPool Static Front-End
 ===========================
 The gloss in front of [mintpool.us][1].
 
+[![Build Status](https://travis-ci.org/azoff/mintpool-website.png?branch=master)](https://travis-ci.org/azoff/mintpool-website)
+
 Getting Started
 ---------------
 To install the front-end, you'll need [jekyll][2], a popular static site generator. Jekyll is a [ruby][5] app so, to
