@@ -8,30 +8,13 @@
 	margin: 0 auto;
 }
 
-.node {
-	display: inline-block;
-	vertical-align: top;
-	min-width: $iphone_width;
-	width: 33%;
-	padding-bottom: $one_unit*1.5;
-}
-
 header {
 
 	text-align: center;
 	overflow: hidden;
-	padding-top: $one_unit*1.5;
+	padding: $one_unit*1.5;
 
 	@include background-image(linear-gradient(top, #EBEBEB, white));
-
-	.wrapper {
-		overflow: hidden;
-	}
-
-	.node {
-		width: 50%;
-		padding: 0 $one_unit*1.5 $one_unit*1.5;
-	}
 
 	nav {
 		text-align: right;

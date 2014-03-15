@@ -7,6 +7,11 @@
 	text-align: center;
 
 	.node {
+		display: inline-block;
+		vertical-align: top;
+		min-width: $iphone_width;
+		width: 33%;
+		padding-bottom: $one_unit*1.5;
 		margin-top: $one_unit
 	}
 
