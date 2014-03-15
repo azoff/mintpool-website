@@ -1,0 +1,30 @@
+@import "compass";
+@import "../colors";
+@import "../sizes";
+
+#content {
+
+	table {
+		display: inline-block;
+		vertical-align: top;
+		min-width: $iphone_width;
+		width: 33%;
+		padding-bottom: $one_unit*1.5;
+		margin-top: $one_unit;
+		th {
+			text-align: right;
+		}
+		td, th {
+			padding: $one_unit/2;
+		}
+		td {
+			border-left: solid 1px $tertiary-color;
+		}
+	}
+
+	.node {
+		margin: 0 auto;
+		width: 295px;
+	}
+
+}

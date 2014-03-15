@@ -26,25 +26,23 @@ define('utils/anim', ['utils/core', 'utils/dom'], function(utils, dom){
 		});
 	};
 
-	var toggleLoader = exports.toggleLoader = function(el, active, visible) {
-		if (active) el.classList.add('active');
-		else el.classList.remove('active');
-		if (visible) el.classList.add('visible');
-		else el.classList.remove('visible');
-	};
-
 	exports.startLoader = function(el) {
-		toggleLoader(el, true, false);
+		clearTimeout(el.loaderTimeout);
+		el.classList.add('active');
+		el.classList.add('visible');
 		loopLoader(el);
 	};
 
 	exports.stopLoader = function(el) {
 		clearTimeout(el.loaderTimeout);
-		toggleLoader(el, true, false);
+		el.classList.remove('visible');
+		el.loaderTimeout = setTimeout(function(){
+			el.classList.remove('active');
+		}, 1500);
 	};
 
 	function loopLoader(el) {
-		toggleLoader(el, true, !el.classList.contains('visible'));
+		el.classList.toggle('visible');
 		el.loaderTimeout = setTimeout(utils.partial(loopLoader, el), 1500);
 	}
 

@@ -4,6 +4,7 @@ define(function(require, exports, module){
 
 	exports = {};
 
+	var StringProto = String.prototype;
 	var ObjProto = Object.prototype;
 	var ArrayProto = Array.prototype;
 	var toString = ObjProto.toString;
@@ -12,9 +13,10 @@ define(function(require, exports, module){
 	var nativeKeys = Object.keys;
 	var nativeForEach = ArrayProto.forEach;
 	var nativeIsArray = Array.isArray;
+	var nativeTrim = String.prototype.trim;
 	var breaker = false;
 
-	var keys = exports.keys = function(obj) {
+	var keyfn = exports.keys = function(obj) {
 		if (!isObject(obj)) return [];
 		if (nativeKeys) return nativeKeys(obj);
 		var keys = [];
@@ -36,6 +38,13 @@ define(function(require, exports, module){
 
 	var has = exports.has = function(obj, key) {
 		return hasOwnProperty.call(obj, key);
+	};
+
+	var trim = exports.trim = function(str, characters){
+		if (str === null) return '';
+		if (!characters && nativeTrim) return nativeTrim.call(str);
+		characters = defaultToWhiteSpace(characters);
+		return String(str).replace(new RegExp('^' + characters + '+|' + characters + '+$', 'g'), '');
 	};
 
 	var partial = exports.partial = function(func) {
@@ -72,13 +81,22 @@ define(function(require, exports, module){
 				if (iterator.call(context, obj[i], i, obj) === breaker) return;
 			}
 		} else {
-			var keys = keys(obj);
+			var keys = keyfn(obj);
 			for (i = 0, length = keys.length; i < length; i++) {
 				if (iterator.call(context, obj[keys[i]], keys[i], obj) === breaker) return;
 			}
 		}
 		return obj;
 	};
+
+	function defaultToWhiteSpace(characters) {
+		if (characters === null)
+			return '\\s';
+		else if (characters.source)
+			return characters.source;
+		else
+			return '[' + _s.escapeRegExp(characters) + ']';
+	}
 
 	return exports;
 

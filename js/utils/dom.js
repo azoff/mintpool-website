@@ -34,6 +34,18 @@ define('utils/dom', ['utils/core'], function(utils){
 		return (el === null || matches(el, selector)) ? el : closest(el.parentNode, selector);
 	};
 
+	exports.toElement = function(html) {
+		var div = document.createElement('div');
+		div.innerHTML = utils.trim(html);
+		return div.childNodes[0];
+	};
+
+	exports.loadScript = function(src) {
+		var script = document.createElement('script');
+		script.src = src;
+		document.body.appendChild(script);
+	};
+
 	var on = exports.on = function(el, type, selector, listener) {
 
 		if (utils.isArray(type)) {
