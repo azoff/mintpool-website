@@ -1,3 +1,4 @@
+<script src="{{ rel }}js/require.js" data-main="{{ rel }}js/app.js"></script>
 {% if page.js %}
-<script async src="{{ rel }}/js/require.js" data-main="{{ page.js }}"></script>
+<script>require(['{{ page.js }}']);</script>
 {% endif %}

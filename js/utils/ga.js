@@ -6,7 +6,7 @@ define(function (require) {
 	window.GoogleAnalyticsObject = "ga";
 
 	window.ga = function () {
-		window.ga.q = (window.ga.q || []).push(arguments);
+		(window.ga.q = window.ga.q || []).push(arguments);
 	};
 
 	window.ga.l = new Date().getTime();
