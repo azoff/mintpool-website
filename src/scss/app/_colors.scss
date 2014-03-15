@@ -1,0 +1,11 @@
+/* color palette */
+$tertiary-color: rgb(203, 239, 203);
+$secondary-color: darken($tertiary-color, 15%);
+$primary-color: darken($secondary-color, 15%);
+
+/* text color */
+$secondary-text-color: darken($primary-color, 20%);
+$primary-text-color: darken($secondary-text-color, 10%);
+
+/* state colors */
+$actionable-color: $secondary-text-color;

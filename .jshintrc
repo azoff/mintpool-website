@@ -1,0 +1,16 @@
+{
+	"bitwise": true,
+	"eqeqeq": true,
+	"forin": true,
+	"noarg": true,
+	"noempty":true,
+	"nonew": true,
+	"undef": true,
+	"strict": true,
+	"browser": true,
+	"globals": {
+		"require": false,
+		"requirejs": false,
+		"define": true
+	}
+}

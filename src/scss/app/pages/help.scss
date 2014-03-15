@@ -1,0 +1,23 @@
+@import "compass";
+@import "../colors";
+@import "../sizes";
+
+#content {
+
+	padding: $one_unit;
+
+	h1 {
+		font-size: 2.5em;
+	}
+
+	h3 {
+		font-size: 1.6em;
+		color: $secondary-text-color;
+	}
+
+	h4 {
+		margin-top: $one_unit*2;
+		line-height: 1.2;
+	}
+
+}

@@ -1,0 +1,34 @@
+@import "compass";
+@import "../colors";
+@import "../sizes";
+
+#content {
+
+	text-align: center;
+
+	.node {
+		margin-top: $one_unit
+	}
+
+	.copy {
+		img {
+			width: 128px;
+		}
+		h4 {
+			color: $secondary-text-color;
+		}
+	}
+
+	.details, .worker {
+		text-align: left;
+		padding: $one_unit;
+		h3 {
+			color: $secondary-text-color;
+			line-height: 1.4;
+		}
+		h4 {
+			margin: -2px 0 4px;
+		}
+	}
+
+}
