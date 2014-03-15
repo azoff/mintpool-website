@@ -1,10 +1,10 @@
-Mintpool.us Static Frontend
+MintPool Static Front-End
 ===========================
-The static frontend for [mintpool.us][1].
+The gloss in front of [mintpool.us][1].
 
 Getting Started
 ---------------
-To install the frontend, you'll need [jekyll][2], a popular static site generator. Jekyll is a [ruby][5] app so, to
+To install the front-end, you'll need [jekyll][2], a popular static site generator. Jekyll is a [ruby][5] app so, to
 [install it][3], you'll need [rubygems][4]. Most modern 'nix distros and OSX come with ruby pre-installed. Assuming you
 now have ruby, installing jekyll is pretty straightforward from a bash terminal:
 
