@@ -1,5 +1,5 @@
 http_path = "/"
-css_dir = "src/css"
-sass_dir = "src/scss"
-images_dir = "src/img"
+css_dir = "css"
+sass_dir = "scss"
+images_dir = "img"
 output_style = :compressed
