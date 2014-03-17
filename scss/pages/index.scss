@@ -9,7 +9,7 @@
 	.node {
 		display: inline-block;
 		vertical-align: top;
-		min-width: $iphone_width;
+		min-width: $iphone_width - (2*$one_unit);
 		width: 33%;
 		padding-bottom: $one_unit*1.5;
 		margin-top: $one_unit
@@ -19,20 +19,13 @@
 		img {
 			width: 128px;
 		}
-		h4 {
-			color: $secondary-text-color;
-		}
 	}
 
 	.details, .worker {
 		text-align: left;
 		padding: $one_unit;
 		h3 {
-			color: $secondary-text-color;
 			line-height: 1.4;
-		}
-		h4 {
-			margin: 0;
 		}
 	}
 

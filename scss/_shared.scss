@@ -6,13 +6,14 @@
 	min-width: $iphone_width;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 $one_unit;
 }
 
 header {
 
 	text-align: center;
 	overflow: hidden;
-	padding: $one_unit*1.5;
+	padding: $one_unit*1.5 $one_unit;
 
 	@include background-image(linear-gradient(top, #EBEBEB, white));
 

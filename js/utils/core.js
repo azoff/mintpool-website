@@ -69,7 +69,7 @@ define(function(require, exports, module){
 
 	};
 
-	partial.placeholder = {};
+	partial.placeholder = '?';
 
 	var each = exports.each = exports.forEach = function(obj, iterator, context) {
 		var i, length;

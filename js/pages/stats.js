@@ -2,15 +2,20 @@ require(['utils/core', 'utils/dom', 'client'], function(utils, dom, client) {
 
 	"use strict";
 
-	client.get_hashrate(applyData);
-	client.get_profit(applyData);
+	var currencies = ['doge', 'mint'];
+	utils.each(currencies, fetchData);
 
-	function applyData(data) {
-		utils.each(data, applyDatum);
+	function fetchData(currency) {
+		client.get_hashrate(currency, utils.partial(applyData, currency));
+		client.get_profit(currency, utils.partial(applyData, currency));
 	}
 
-	function applyDatum(value, key) {
-		var el = dom.body.querySelector('.' + key);
+	function applyData(currency, data) {
+		utils.each(data, utils.partial(applyDatum, currency));
+	}
+
+	function applyDatum(currency, value, key) {
+		var el = dom.body.querySelector('.' + currency + ' .' + key);
 		if (el) el.innerHTML = value;
 	}
 
