@@ -20,4 +20,11 @@
 		line-height: 1.2;
 	}
 
+	ul {
+		padding: $one_unit 0 0 ($one_unit * 2);
+		li {
+			line-height: 1.4;
+		}
+	}
+
 }

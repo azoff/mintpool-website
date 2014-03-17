@@ -14,6 +14,26 @@ css:    pages/help
 	<a href="#profitablity">profitable</a> coin.
 </p>
 
+<h4 id="payouts">How am I paid for mining?</h4>
+<p>
+	When the pool finds a block in any of the <a href="#scrypt">alt-coins</a> it mines for, the reward is split
+	proportionally amongst it's contributors (less a <a href="#fees">pool fee</a>, of course). However, depending on
+	which pool a worker mines for, the pool pays out in a converted <a href="#doge">Dogecoin</a> or
+	<a href="#mint">Mintcoin</a>. Payouts occur daily, usually between 2300 - 0300 CST, depending on trading volume.
+	This convenience allows miners to focus more on mining, and less on using the markets to convert to their desired
+	coin.
+</p>
+
+<h4 id="ports">How do I know which coin I am paid in?</h4>
+<p>
+	MintPool has two stratums, or servers that accept pool connections over a the internet. The stratum host for MintPool
+	is <strong>stratum+tcp://mintpool.us</strong>. However, depending on which port you connect to, you will be paid out
+	in that port's assigned coin. For <a href="#doge">Dogecoin</a>, use port <strong>3333</strong>, for
+	<a href="mint">Mintcoin</a> use port <strong>4444</strong> or <strong>3334</strong>. Please do not forget:
+	<u>you must</u> provide a username to the pool of the receiving address for the coins you earn. Failure to do
+	so will treat any earned coins as a donation to the pool!
+</p>
+
 <h4 id="profitablity">What is profitability?</h4>
 <p>
 	Profitability is the ratio of how much you can potentially earn by mining the specified coin rather than mining
@@ -21,12 +41,22 @@ css:    pages/help
 	This assumes that you immediately take the coin and trade it in for Bitcoins.
 </p>
 
-<h4 id="scrypt">What is Scrypt?</h4>
+<h4 id="scrypt">What coins does this pool mine?</h4>
 <p>
-	Scrypt is the name of the algorithm used by some coins as a <a href="#poofofwork">proof-of-work</a>. By design, this
-	algorithm is hard to predict, and the lucky miner who predicts a random scrypt hash earns a reward. It is the goal
-	of this pool to successfully solve Scrypt hashes.
+	MintPool mines Scrypt-based altcoins. Scrypt is the name of the algorithm used by some coins as a
+	<a href="#poofofwork">proof-of-work</a>. By design, the output (aka hash) of this algorithm is hard to predict,
+	and the lucky miner who guesses it, earns a reward. It is the goal of this pool to successfully guess the hashes
+	of the <a href="#profitablity">most profitable</a> coins. Here are the coins MintPool currently mines:
 </p>
+<ul>
+	<li><a href="http://dogecoin.com/">Dogecoin (DOGE)</a></li>
+	<li><a href="http://getearthcoin.com/">EarthCoin (EAC)</a></li>
+	<li><a href="https://litecoin.org/">LiteCoin (LTC)</a></li>
+	<li><a href="http://casinoco.in/">CasinoCoin (CSC)</a></li>
+	<li><a href="http://lottocoin.org/">Lottocoin (LOTTO)</a></li>
+	<li><a href="https://kittehcoin.info/">KittehCoin (MEOW)</a></li>
+	<li><a href="http://catcoins.biz/">Catcoin (CAT)</a></li>
+</ul>
 
 <h4 id="poofofwork">What is a proof-of-work?</h4>
 <p>
@@ -46,6 +76,14 @@ css:    pages/help
 	<a href="http://www.reddit.com/r/dogecoin">Dogecoin subreddit</a>.
 </p>
 
+<h4 id="mint">What is Mintcoin?</h4>
+<p>
+	MintCoin is an innovative, secure and energy efficient coin. It uses a faster
+	<a href="#proofofwork">Proof-Of-Work</a> distribution mechanism to distribute the initial coins, then after 5 weeks
+	the coin is basically transferred to a pure Proof-Of-Stake coin, where the generation of the coin is mainly
+	through the Proof-Of-Stake interests.
+</p>
+
 <h4 id="issues">Having an issue with the site?</h4>
 <p>
 	You can make feature requests and let the developers know about issues by using
@@ -54,5 +92,7 @@ css:    pages/help
 
 <h4 id="contact">Want to get in touch?</h4>
 <p>
-	You can find us on IRC: <a href="irc://#mintpool@irc.freenode.net">#mintpool@irc.freenode.net</a>
+	You can find us on Reddit (<a href="http://www.reddit.com/r/mintpool">/r/mintpool</a>),
+	Twitter (<a href="https://twitter.com/MintPool">@MintPool</a>)
+	and IRC (<a href="irc://#mintpool@irc.freenode.net">#mintpool@irc.freenode.net</a>)
 </p>
